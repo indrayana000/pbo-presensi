@@ -58,7 +58,7 @@ public class Absensi extends javax.swing.JFrame {
 
         titleLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(255, 255, 255));
-        titleLabel.setText("Presensi Kelas Pendidikan Kewarganegaraan");
+        titleLabel.setText("Presensi");
 
         javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
         titlePanel.setLayout(titlePanelLayout);
