@@ -13,11 +13,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tambah Admin"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addAdminMenuActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="removeAdminMenu">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Hapus Admin"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeAdminMenuActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="exitMenu">
               <Properties>
@@ -38,21 +44,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tambah Data"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addStudentMenuActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="removeStudentMenu">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Hapus Data"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeStudentMenuActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="updateDataMenu">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Perbarui Data"/>
               </Properties>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="selectDataMenu">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Lihat Data"/>
-              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateDataMenuActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

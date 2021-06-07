@@ -5,6 +5,7 @@
  */
 package pboproject;
 
+
 /**
  *
  * @author Muhammad Hafidz A
@@ -36,16 +37,25 @@ public class Menu extends javax.swing.JFrame {
         addStudentMenu = new javax.swing.JMenuItem();
         removeStudentMenu = new javax.swing.JMenuItem();
         updateDataMenu = new javax.swing.JMenuItem();
-        selectDataMenu = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         adminMenu.setText("Admin");
 
         addAdminMenu.setText("Tambah Admin");
+        addAdminMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addAdminMenuActionPerformed(evt);
+            }
+        });
         adminMenu.add(addAdminMenu);
 
         removeAdminMenu.setText("Hapus Admin");
+        removeAdminMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeAdminMenuActionPerformed(evt);
+            }
+        });
         adminMenu.add(removeAdminMenu);
 
         exitMenu.setText("Keluar");
@@ -61,16 +71,28 @@ public class Menu extends javax.swing.JFrame {
         dataMenu.setText("Data Mahasiswa");
 
         addStudentMenu.setText("Tambah Data");
+        addStudentMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addStudentMenuActionPerformed(evt);
+            }
+        });
         dataMenu.add(addStudentMenu);
 
         removeStudentMenu.setText("Hapus Data");
+        removeStudentMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeStudentMenuActionPerformed(evt);
+            }
+        });
         dataMenu.add(removeStudentMenu);
 
         updateDataMenu.setText("Perbarui Data");
+        updateDataMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateDataMenuActionPerformed(evt);
+            }
+        });
         dataMenu.add(updateDataMenu);
-
-        selectDataMenu.setText("Lihat Data");
-        dataMenu.add(selectDataMenu);
 
         jMenuBar1.add(dataMenu);
 
@@ -95,6 +117,38 @@ public class Menu extends javax.swing.JFrame {
         new Login().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_exitMenuActionPerformed
+
+    private void addAdminMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAdminMenuActionPerformed
+        // TODO add your handling code here:
+        //adminTambah a = new adminTambah();
+        //desk.add(a);
+        new adminTambah().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addAdminMenuActionPerformed
+
+    private void removeAdminMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeAdminMenuActionPerformed
+        // TODO add your handling code here:
+        new adminHapus().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_removeAdminMenuActionPerformed
+
+    private void addStudentMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentMenuActionPerformed
+        // TODO add your handling code here:
+        new mahasiswaTambahData().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addStudentMenuActionPerformed
+
+    private void removeStudentMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeStudentMenuActionPerformed
+        // TODO add your handling code here:
+        new mahasiswaHapusData().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_removeStudentMenuActionPerformed
+
+    private void updateDataMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDataMenuActionPerformed
+        // TODO add your handling code here:
+        new mahasiswaPerbaruiData().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_updateDataMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,7 +194,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem removeAdminMenu;
     private javax.swing.JMenuItem removeStudentMenu;
-    private javax.swing.JMenuItem selectDataMenu;
     private javax.swing.JMenuItem updateDataMenu;
     // End of variables declaration//GEN-END:variables
 }

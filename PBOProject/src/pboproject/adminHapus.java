@@ -14,22 +14,22 @@ import javax.swing.JOptionPane;
  *
  * @author Muhammad Hafidz A
  */
-public class adminTambah extends javax.swing.JFrame {
+public class adminHapus extends javax.swing.JFrame {
     Koneksi log = new Koneksi();
     /**
-     * Creates new form adminTambah
+     * Creates new form adminHapus
      */
-    public adminTambah() {
+    public adminHapus() {
         initComponents();
         nampil();
         setLocationRelativeTo(this);
     }
-
+    
     private void nampil() {
         log.getCon();
         log.tampil(adminTable, "SELECT ID,nama FROM admin");
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,7 +49,7 @@ public class adminTambah extends javax.swing.JFrame {
         passwordField = new javax.swing.JPasswordField();
         nameTextField = new javax.swing.JTextField();
         buttonPanel = new javax.swing.JPanel();
-        addButton = new javax.swing.JButton();
+        removeButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
         tablePanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -71,7 +71,7 @@ public class adminTambah extends javax.swing.JFrame {
 
         titleLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(255, 255, 255));
-        titleLabel.setText("Tambah Admin");
+        titleLabel.setText("Hapus Admin");
 
         javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
         titlePanel.setLayout(titlePanelLayout);
@@ -80,7 +80,7 @@ public class adminTambah extends javax.swing.JFrame {
             .addGroup(titlePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(titleLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(751, Short.MAX_VALUE))
         );
         titlePanelLayout.setVerticalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,15 +131,15 @@ public class adminTambah extends javax.swing.JFrame {
                 .addComponent(passwordLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         buttonPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        addButton.setText("Tambah");
-        addButton.addActionListener(new java.awt.event.ActionListener() {
+        removeButton.setText("Hapus");
+        removeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
+                removeButtonActionPerformed(evt);
             }
         });
 
@@ -157,15 +157,15 @@ public class adminTambah extends javax.swing.JFrame {
             .addGroup(buttonPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(addButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(removeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cancelButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE))
                 .addContainerGap())
         );
         buttonPanelLayout.setVerticalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buttonPanelLayout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
-                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(61, Short.MAX_VALUE)
+                .addComponent(removeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52))
@@ -185,9 +185,6 @@ public class adminTambah extends javax.swing.JFrame {
             }
         ));
         jScrollPane2.setViewportView(adminTable);
-        if (adminTable.getColumnModel().getColumnCount() > 0) {
-            adminTable.getColumnModel().getColumn(0).setPreferredWidth(1);
-        }
 
         javax.swing.GroupLayout tablePanel1Layout = new javax.swing.GroupLayout(tablePanel1);
         tablePanel1.setLayout(tablePanel1Layout);
@@ -195,15 +192,15 @@ public class adminTambah extends javax.swing.JFrame {
             tablePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tablePanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
                 .addContainerGap())
         );
         tablePanel1Layout.setVerticalGroup(
             tablePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tablePanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(120, 120, 120))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(123, 123, 123))
         );
 
         adminMenu.setText("Admin");
@@ -271,32 +268,40 @@ public class adminTambah extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(titlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(formPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(buttonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(tablePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(titlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(418, 418, 418)
+                    .addComponent(tablePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(27, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(titlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(buttonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(formPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tablePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(24, Short.MAX_VALUE))
+                    .addComponent(buttonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(94, 94, 94)
+                    .addComponent(tablePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
+    private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
         // TODO add your handling code here:
 
         log.getCon();
@@ -309,11 +314,11 @@ public class adminTambah extends javax.swing.JFrame {
 
             rsLogin.next();
             rsLogin.last(); //mengecek jumlah baris pada hasil query
-            if (rsLogin.getRow()==0){
-                log.Eksekusi("INSERT INTO `admin` (`ID`, `Nama`, `Password`) VALUES ('"+idTextField.getText()+"', '"+nameTextField.getText()+"', '" + passText + "');","Berhasil Menyimpan");
+            if (rsLogin.getRow()==1){
+                log.Eksekusi("DELETE FROM `admin` WHERE ID='"+idTextField.getText()+"' AND Nama='"+nameTextField.getText()+"' AND Password='" + passText + "';","Berhasil dihapus");
                 log.tampil(adminTable, "SELECT ID,Nama FROM admin");
             } else {
-                JOptionPane.showMessageDialog(null, "Maaf, ID / Nama / password sudah digunakan!");
+                JOptionPane.showMessageDialog(null, "Maaf, ID / Nama / password salah!");
                 idTextField.setText("");
                 nameTextField.setText("");
                 passwordField.setText("");
@@ -322,7 +327,7 @@ public class adminTambah extends javax.swing.JFrame {
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Terjadi Kesalahan");
         }
-    }//GEN-LAST:event_addButtonActionPerformed
+    }//GEN-LAST:event_removeButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         // TODO add your handling code here:
@@ -353,6 +358,8 @@ public class adminTambah extends javax.swing.JFrame {
 
     private void addStudentMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentMenuActionPerformed
         // TODO add your handling code here:
+        new mahasiswaTambahData().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_addStudentMenuActionPerformed
 
     private void removeStudentMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeStudentMenuActionPerformed
@@ -384,27 +391,26 @@ public class adminTambah extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(adminTambah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(adminHapus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(adminTambah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(adminHapus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(adminTambah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(adminHapus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(adminTambah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(adminHapus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new adminTambah().setVisible(true);
+                new adminHapus().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem addAdminMenu;
-    private javax.swing.JButton addButton;
     private javax.swing.JMenuItem addStudentMenu;
     private javax.swing.JMenu adminMenu;
     private javax.swing.JTable adminTable;
@@ -416,16 +422,14 @@ public class adminTambah extends javax.swing.JFrame {
     private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTextField;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JMenuItem removeAdminMenu;
+    private javax.swing.JButton removeButton;
     private javax.swing.JMenuItem removeStudentMenu;
-    private javax.swing.JTable studentTable;
-    private javax.swing.JPanel tablePanel;
     private javax.swing.JPanel tablePanel1;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JPanel titlePanel;
