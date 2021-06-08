@@ -122,7 +122,7 @@ public class Absensi extends javax.swing.JFrame {
             }
         });
 
-        cancelButton.setText("Batalkan");
+        cancelButton.setText("Bersihkan Form");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelButtonActionPerformed(evt);
@@ -150,7 +150,7 @@ public class Absensi extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        tablePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        tablePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Laporan Presensi"));
 
         studentTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

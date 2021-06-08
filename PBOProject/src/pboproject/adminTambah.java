@@ -143,7 +143,7 @@ public class adminTambah extends javax.swing.JFrame {
             }
         });
 
-        cancelButton.setText("Batalkan");
+        cancelButton.setText("Bersihkan Form");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelButtonActionPerformed(evt);
@@ -158,7 +158,7 @@ public class adminTambah extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(addButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cancelButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE))
+                    .addComponent(cancelButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         buttonPanelLayout.setVerticalGroup(
@@ -195,7 +195,7 @@ public class adminTambah extends javax.swing.JFrame {
             tablePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tablePanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
                 .addContainerGap())
         );
         tablePanel1Layout.setVerticalGroup(
@@ -353,6 +353,8 @@ public class adminTambah extends javax.swing.JFrame {
 
     private void addStudentMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentMenuActionPerformed
         // TODO add your handling code here:
+        new mahasiswaTambahData().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_addStudentMenuActionPerformed
 
     private void removeStudentMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeStudentMenuActionPerformed
@@ -416,7 +418,6 @@ public class adminTambah extends javax.swing.JFrame {
     private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTextField;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JTextField nameTextField;
@@ -424,8 +425,6 @@ public class adminTambah extends javax.swing.JFrame {
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JMenuItem removeAdminMenu;
     private javax.swing.JMenuItem removeStudentMenu;
-    private javax.swing.JTable studentTable;
-    private javax.swing.JPanel tablePanel;
     private javax.swing.JPanel tablePanel1;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JPanel titlePanel;
